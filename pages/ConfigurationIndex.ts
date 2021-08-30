@@ -5,10 +5,12 @@ import { ConfigurationBasePage } from "../classes/ConfigurationPage";
 
 class ConfigurationIndex extends Page
 {
+    private categories: Map<string, ConfigurationBasePage[]> = new Map();
     public func: RouteFunc;
     constructor()
     {
-        super("<i class='fa fa-cogs' aria-hidden='true'></i> Configuration", '/configuration', "configuration/index");
+        super("Configuration", '/configuration', "configuration/index");
+        this.icon = 'fa fa-cogs'
         this.func = this.InternalDefaultRouteFunc;
     }
 
